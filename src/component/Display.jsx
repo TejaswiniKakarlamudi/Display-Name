@@ -15,8 +15,8 @@ function Display() {
             
             setfuname('');
         }
-        setfname('');
-        setlname('');
+        // setfname('');
+        // setlname('');
     }
     function handleClick(){
         if (fname.trim() !== '' && lname.trim() !== '') {
@@ -52,7 +52,7 @@ function Display() {
                     />
                 </div>
                 <div>
-                    <button type="submit" onClick={handleClick}>Submit</button>
+                    <button type="submit" onClick={handleSubmit}>Submit</button>
                 </div>
             </form>
             {funame && <h3>Full Name: {funame}</h3>}
