@@ -2,13 +2,15 @@ import styles from './Display.module.css';
 import React, { useState } from 'react';
 
 function Display() {
-    const [fname, setFname] = useState('');
-    const [lname, setLname] = useState('');
-    const [funame, setFuname] = useState('');
+    const [fname, setfname] = useState('');
+    const [lname, setlname] = useState('');
+    const [funame, setfuname] = useState('');
 
     function handleSubmit(event) {
         event.preventDefault();
-        setFuname(`${fname} ${lname}`);
+        setfuname(`${fname} ${lname}`);
+        setfname('');
+        setlname('');
     }
 
     return (
@@ -21,7 +23,8 @@ function Display() {
                         type="text" 
                         placeholder="First Name" 
                         value={fname} 
-                        onChange={(e) => setFname(e.target.value)}
+                        onChange={(e) => setfname(e.target.value)}
+                        required
                     />
                 </div>
                 <div className={styles.inputContainer}>
@@ -30,7 +33,8 @@ function Display() {
                         type="text" 
                         placeholder="Last Name" 
                         value={lname} 
-                        onChange={(e) => setLname(e.target.value)}
+                        onChange={(e) => setlname(e.target.value)}
+                        required
                     />
                 </div>
                 <div>
