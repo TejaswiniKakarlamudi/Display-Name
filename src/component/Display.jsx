@@ -2,31 +2,23 @@ import styles from './Display.module.css';
 import React, { useState } from 'react';
 
 function Display() {
-    const [fname, setfname] = useState('');
-    const [lname, setlname] = useState('');
-    const [funame, setfuname] = useState('');
+    const [fname, setFname] = useState('');
+    const [lname, setLname] = useState('');
+    const [funame, setFuname] = useState('');
 
     function handleSubmit(event) {
         event.preventDefault();
         if (fname.trim() !== '' && lname.trim() !== '') {
            
-            setfuname(`${fname} ${lname}`);
+            setFuname(`${fname} ${lname}`);
         } else {
             
-            setfuname('');
+            setFuname('');
         }
-        // setfname('');
-        // setlname('');
+        // setFname('');
+        // setLname('');
     }
-    function handleClick(){
-        if (fname.trim() !== '' && lname.trim() !== '') {
-           
-            setfuname(`${fname} ${lname}`);
-        } else {
-            
-            setfuname('');
-        }
-    }
+   
     return (
         <div className={styles.set}>
             <h1 className={styles.heading}>Full Name Display</h1>
@@ -37,7 +29,7 @@ function Display() {
                         type="text" 
                         placeholder=" " 
                         value={fname} 
-                        onChange={(e) => setfname(e.target.value)}
+                        onChange={(e) => setFname(e.target.value)}
                         required
                     />
                 </div>
@@ -47,7 +39,7 @@ function Display() {
                         type="text" 
                         placeholder=" " 
                         value={lname} 
-                        onChange={(e) => setlname(e.target.value)}
+                        onChange={(e) => setLname(e.target.value)}
                         required
                     />
                 </div>
