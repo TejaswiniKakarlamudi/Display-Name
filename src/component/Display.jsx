@@ -18,7 +18,15 @@ function Display() {
         setfname('');
         setlname('');
     }
-
+    function handleClick(){
+        if (fname.trim() !== '' && lname.trim() !== '') {
+           
+            setfuname(`${fname} ${lname}`);
+        } else {
+            
+            setfuname('');
+        }
+    }
     return (
         <div className={styles.set}>
             <h1 className={styles.heading}>Full Name Display</h1>
@@ -44,7 +52,7 @@ function Display() {
                     />
                 </div>
                 <div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" onClick={handleClick}>Submit</button>
                 </div>
             </form>
             {funame && <h3>Full Name: {funame}</h3>}
