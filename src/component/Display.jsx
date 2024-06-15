@@ -41,7 +41,7 @@ function Display() {
                     <button type="submit">Submit</button>
                 </form>
             </div>
-            {funame && <div className={styles.result}>Full Name : {funame}</div>}
+            {funame && <div className={styles.result}>Full Name: {funame}</div>}
         </div>
     );
 }

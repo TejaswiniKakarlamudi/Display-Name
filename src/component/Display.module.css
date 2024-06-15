@@ -52,7 +52,7 @@
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    text-transform: uppercase;
+    
   }
   button[type="submit"]:hover {
     background-color: #8f5f8c;
@@ -61,6 +61,6 @@
     color: #000;
     margin-top: 20px;
     font-size: 20px;
-    text-transform: uppercase;
+    
   }
   
