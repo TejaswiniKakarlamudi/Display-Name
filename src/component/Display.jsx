@@ -16,7 +16,7 @@ function Display() {
             <h1 className={styles.heading}>Full Name Display</h1>
             <form onSubmit={handleSubmit} className={styles.formContainer}>
                 <div className={styles.inputContainer}>
-                    <label>First Name:</label>
+                    <label>First Name: </label>
                     <input 
                         type="text" 
                         placeholder="First Name" 
@@ -25,7 +25,7 @@ function Display() {
                     />
                 </div>
                 <div className={styles.inputContainer}>
-                    <label>Last Name:</label>
+                    <label>Last Name: </label>
                     <input 
                         type="text" 
                         placeholder="Last Name" 
@@ -37,7 +37,7 @@ function Display() {
                     <button type="submit">Submit</button>
                 </div>
             </form>
-            {funame && <h3>{funame}</h3>}
+            {funame && <h3>Full Name : {funame}</h3>}
         </div>
     );
 }
