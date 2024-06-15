@@ -8,7 +8,13 @@ function Display() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        setfuname(`${fname} ${lname}`);
+        if (fname.trim() !== '' && lname.trim() !== '') {
+           
+            setfuname(`${fname} ${lname}`);
+        } else {
+            
+            setfuname('');
+        }
         setfname('');
         setlname('');
     }
@@ -21,7 +27,7 @@ function Display() {
                     <label>First Name: </label>
                     <input 
                         type="text" 
-                        placeholder="First Name" 
+                        placeholder=" " 
                         value={fname} 
                         onChange={(e) => setfname(e.target.value)}
                         required
@@ -31,7 +37,7 @@ function Display() {
                     <label>Last Name: </label>
                     <input 
                         type="text" 
-                        placeholder="Last Name" 
+                        placeholder=" " 
                         value={lname} 
                         onChange={(e) => setlname(e.target.value)}
                         required
@@ -41,7 +47,7 @@ function Display() {
                     <button type="submit">Submit</button>
                 </div>
             </form>
-            {funame && <h3>Full Name : {funame}</h3>}
+            {funame && <h3>Full Name: {funame}</h3>}
         </div>
     );
 }
